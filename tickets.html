@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .matches {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .match {
+            flex: 1;
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid #ffffff;
+            padding: 20px;
+        }
+
+        form:hover {
+            transform: scale(1.03);
+            transition-duration: 0.3s;
+        }
+
+        label,
+        input,
+        select,
+        button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>🏆 World Cup-2026</h2>
+
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="standings.html">Standings</a></li>
+            <li><a href="stadiums.html">Stadiums</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="squads.html">Squads</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact-Us</a></li>
+            <li><button id="theme-toggle">🌙 Change Theme</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="matches">
+            <div class="match">Mexico vs Spain <br> <b>$150</b></div>
+            <div class="match">USA vs Netherlands <br> <b>$180</b></div>
+        </div>
+        <form>
+            <label>Name:</label> <input type="text">
+            <label>Match:</label>
+            <select>
+                <option>Mexico vs Spain ($150)</option>
+                <option>USA vs Netherlands ($180)</option>
+            </select>
+            <label>Tickets:</label> <input type="number" min="1" value="1">
+            <input type="button" value="Book">
+
+        </form>
+    </div>
+    <footer class="footer">
+        <style>
+            .footer {
+                margin-top: auto;
+                width: 100%;
+                margin-bottom: 0;
+
+            }
+        </style>
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h2>World Cup 2026</h2>
+                <p>The biggest football tournament hosted by USA, Canada & Mexico.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 World Cup Fan Site | All Rights Reserved</p>
+            </div>
+    </footer>
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

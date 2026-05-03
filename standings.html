@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standings</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .main-container {
+            width: 100%;
+        }
+
+        .groups-grid {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+
+        .group-card {
+
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 2px rgb(29, 29, 49) solid;
+
+        }
+
+        .group-card:hover {
+            transform: scale(1.03);
+            transition-duration: 0.3s;
+
+        }
+
+
+
+        .group-title {
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .table-header {
+            display: flex;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0 5px 5px 5px;
+        }
+
+        .header-team {
+            flex: 1;
+            border-bottom: 0.5px rgb(22, 23, 77) solid;
+        }
+
+        .header-stat {
+            width: 30px;
+            text-align: center;
+            border-bottom: 0.5px rgb(22, 23, 77) solid;
+        }
+
+        .team-row {
+            display: flex;
+            align-items: center;
+            padding: 10px 8px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+
+        .team-name {
+            flex: 1;
+            padding: -5px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+
+        .stat {
+            width: 30px;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pts {
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>🏆 World Cup-2026</h2>
+
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="standings.html">Standings</a></li>
+            <li><a href="stadiums.html">Stadiums</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="squads.html">Squads</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact-Us</a></li>
+            <li><button id="theme-toggle">🌙 Change Theme</button></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="groups-grid">
+
+            <div class="group-card">
+                <div class="group-title">Group A</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-mx"></span></div>
+                    <span class="team-name">Mexico</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-kr"></span></div>
+                    <span class="team-name">South Korea</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-za"></span></div>
+                    <span class="team-name">South Africa</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">3</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-cz"></span></div>
+                    <span class="team-name">Czechia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">1</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group B</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-ca"></span></div>
+                    <span class="team-name">Canada</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">9</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ch"></span></div>
+                    <span class="team-name">Switzerland</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-qa"></span></div>
+                    <span class="team-name">Qatar</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">2</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ba"></span></div>
+                    <span class="team-name">Bosnia & Herz.</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">1</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group C</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-br"></span></div>
+                    <span class="team-name">Brazil</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ma"></span></div>
+                    <span class="team-name">Morocco</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">5</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-gb-sct"></span></div>
+                    <span class="team-name">Scotland</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">2</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ht"></span></div>
+                    <span class="team-name">Haiti</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">1</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group D</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-us"></span></div>
+                    <span class="team-name">USA</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-tr"></span></div>
+                    <span class="team-name">Türkiye</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-au"></span></div>
+                    <span class="team-name">Australia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">3</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-py"></span></div>
+                    <span class="team-name">Paraguay</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">1</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group E</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-de"></span></div>
+                    <span class="team-name">Germany</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">9</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ec"></span></div>
+                    <span class="team-name">Ecuador</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ci"></span></div>
+                    <span class="team-name">Ivory Coast</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-cw"></span></div>
+                    <span class="team-name">Curaçao</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group F</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-nl"></span></div>
+                    <span class="team-name">Netherlands</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-jp"></span></div>
+                    <span class="team-name">Japan</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-se"></span></div>
+                    <span class="team-name">Sweden</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-tn"></span></div>
+                    <span class="team-name">Tunisia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group G</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-be"></span></div>
+                    <span class="team-name">Belgium</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-eg"></span></div>
+                    <span class="team-name">Egypt</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">5</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-ir"></span></div>
+                    <span class="team-name">Iran</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-nz"></span></div>
+                    <span class="team-name">New Zealand</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group H</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-es"></span></div>
+                    <span class="team-name">Spain</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">9</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-uy"></span></div>
+                    <span class="team-name">Uruguay</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-sa"></span></div>
+                    <span class="team-name">Saudi Arabia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">3</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-cv"></span></div>
+                    <span class="team-name">Cape Verde</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group I</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-fr"></span></div>
+                    <span class="team-name">France</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-sn"></span></div>
+                    <span class="team-name">Senegal</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-no"></span></div>
+                    <span class="team-name">Norway</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-iq"></span></div>
+                    <span class="team-name">Iraq</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group J</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-ar"></span></div>
+                    <span class="team-name">Argentina</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">9</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-at"></span></div>
+                    <span class="team-name">Austria</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-dz"></span></div>
+                    <span class="team-name">Algeria</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">4</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-jo"></span></div>
+                    <span class="team-name">Jordan</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group K</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-pt"></span></div>
+                    <span class="team-name">Portugal</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-co"></span></div>
+                    <span class="team-name">Colombia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">6</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-uz"></span></div>
+                    <span class="team-name">Uzbekistan</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">3</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-cd"></span></div>
+                    <span class="team-name">DR Congo</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">1</span>
+                </div>
+            </div>
+
+            <div class="group-card">
+                <div class="group-title">Group L</div>
+                <div class="table-header">
+                    <span class="header-team">TEAM</span>
+                    <span class="header-stat">MP</span>
+                    <span class="header-stat">PTS</span>
+                </div>
+                <div class="team-row top-seed">
+                    <div class="flag-box"><span class="fi fi-gb-eng"></span></div>
+                    <span class="team-name">England</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-hr"></span></div>
+                    <span class="team-name">Croatia</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">7</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-gh"></span></div>
+                    <span class="team-name">Ghana</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">3</span>
+                </div>
+                <div class="team-row">
+                    <div class="flag-box"><span class="fi fi-pa"></span></div>
+                    <span class="team-name">Panama</span>
+                    <span class="stat">3</span>
+                    <span class="stat pts">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h2>World Cup 2026</h2>
+                <p>The biggest football tournament hosted by USA, Canada & Mexico.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 World Cup Fan Site | All Rights Reserved</p>
+            </div>
+    </footer>
+    <script src="javascript.js"></script>
+
+
+</body>
+
+</html>

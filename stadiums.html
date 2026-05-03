@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA World Cup 2026 - Major Venues</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .stadium-img {
+            cursor: pointer;
+            transition: transform 0.3s;
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .stadium-img:hover {
+            transform: scale(1.05);
+        }
+
+
+        .stadium-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stadium-card {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-text {
+            margin-top: 15px;
+        }
+
+        .stadium-name {
+            font-weight: bold;
+            display: block;
+            font-size: 1.2em;
+        }
+
+        .match-type {
+            display: block;
+            color: #d9534f;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>🏆 World Cup-2026</h2>
+
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="standings.html">Standings</a></li>
+            <li><a href="stadiums.html">Stadiums</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="squads.html">Squads</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact-Us</a></li>
+            <li><button id="theme-toggle">🌙 Change Theme</button></li>
+        </ul>
+    </nav>
+    <div class="stadium-container">
+
+
+        <div class="stadium-card">
+            <img src="dallas.jpg" class="stadium-img"
+                data-location="https://www.google.com/maps/search/?api=1&query=AT%26T+Stadium+Texas" alt="AT&T Stadium">
+            <div class="info-text">
+                <span class="stadium-name">AT&T Stadium (Dallas)</span>
+                <span>Capacity: 92,967</span>
+                <span class="match-type">Semi-final</span>
+            </div>
+        </div>
+
+
+        <div class="stadium-card">
+            <img src="atlanta.jpg" class="stadium-img"
+                data-location="https://www.google.com/maps/search/?api=1&query=Mercedes-Benz+Stadium+Atlanta"
+                alt="Mercedes-Benz Stadium">
+            <div class="info-text">
+                <span class="stadium-name">Mercedes-Benz Stadium (Atlanta)</span>
+                <span>Capacity: 75,000</span>
+                <span class="match-type">Semi-final</span>
+            </div>
+        </div>
+
+
+        <div class="stadium-card">
+            <img src="miami.jpg" class="stadium-img"
+                data-location="https://www.google.com/maps/search/?api=1&query=Hard+Rock+Stadium+Miami"
+                alt="Hard Rock Stadium">
+            <div class="info-text">
+                <span class="stadium-name">Hard Rock Stadium (Miami)</span>
+                <span>Capacity: 64,767</span>
+                <span class="match-type">Quarter-final & Bronze Medal Match</span>
+            </div>
+        </div>
+
+
+        <div class="stadium-card">
+            <img src="metlife.jpg" class="stadium-img"
+                data-location="https://www.google.com/maps/search/?api=1&query=MetLife+Stadium+New+Jersey"
+                alt="MetLife Stadium">
+            <div class="info-text">
+                <span class="stadium-name">MetLife Stadium (New York/New Jersey)</span>
+                <span>Capacity: 82,500</span>
+                <span class="match-type">The World Cup Final</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const stadiums = document.querySelectorAll('.stadium-img');
+        stadiums.forEach(stadium => {
+            stadium.addEventListener('click', function () {
+                const mapUrl = this.getAttribute('data-location');
+                window.open(mapUrl, '_blank');
+            });
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h2>World Cup 2026</h2>
+                <p>The biggest football tournament hosted by USA, Canada & Mexico.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 World Cup Fan Site | All Rights Reserved</p>
+            </div>
+    </footer>
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>
